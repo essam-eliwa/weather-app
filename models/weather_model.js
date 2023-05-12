@@ -40,17 +40,7 @@ class WeatherData {
       this.humidity = weather_data.main.humidity;
       this.iconUrl = `http://openweathermap.org/img/w/${this.icon}.png`;
 
-      return {
-        city: this.city,
-        country: this.country,
-        temp: this.temp,
-        desc: this.desc,
-        icon: this.icon,
-        main: this.main,
-        wind: this.wind,
-        humidity: this.humidity,
-        iconUrl: this.iconUrl,
-      };
+      return this;
     } catch (error) {
       console.error(error);
       throw error;
