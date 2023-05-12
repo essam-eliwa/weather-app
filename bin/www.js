@@ -21,7 +21,6 @@ app.set('port', PORT);
 app.set('host', HOST);
 app.set('env', process.env.ENV);
 
-
 /**
  * Create HTTP server.
  */
