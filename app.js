@@ -5,8 +5,7 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import { fileURLToPath } from "url";
 
-import indexRouter from "./routes/index.js";
-import usersRouter from "./routes/users.js";
+import router from "./routes/routes.js";
 
 //Read the current directory name
 export const __filename = fileURLToPath(import.meta.url);
@@ -20,7 +19,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
-app.use(express.json());
+//app.use(express.json());
 
 //When extended property is set to true, the URL-encoded data will be parsed with the qs library.
 //qs library allows you to create a nested object from your query string.
@@ -36,8 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log("ENV: ", app.get('env'));
 
 //setup routes
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+app.use('/', router);
 
 // error handler
 app.use(function(err, req, res, next) {

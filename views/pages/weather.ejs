@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App API Demo</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <header>
+    <%- include('../partials/header') %>
+  </header>
+  <div class="jumbotron">
+    <h1>Weather App</h1>
+    <p>Welcome to SWE230 Weather App</p>
+  </div>
+    
+    <!--Main Content-->
+    <div class="d-flex justify-content-center">
+      
+      <img src="images/weather-icon.png" width=100 alt="Weather Icon">
+    </div>
+   
+    <%- include('../partials/weather-card') %>
+    <footer>
+    <%- include('../partials/footer') %>
+  </footer>
+  </body>
+</html>

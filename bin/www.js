@@ -17,9 +17,11 @@ dotenv.config()
 
 const PORT = (process.env.PORT || '8000');
 const HOST = (process.env.HOST || 'localhost');
+const ENV = (process.env.ENV || 'development');
+
 app.set('port', PORT);
 app.set('host', HOST);
-app.set('env', process.env.ENV);
+app.set('env', ENV);
 
 /**
  * Create HTTP server.

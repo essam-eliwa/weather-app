@@ -14,6 +14,8 @@ Using Javascript/Node for fullstack web development.
 
 ```terminal
 git clone https://github.com/essam-eliwa/express-app.git
+git remote remove origin
+git remote add origin <Your Github Repo URL>
 npm install
 ```
 

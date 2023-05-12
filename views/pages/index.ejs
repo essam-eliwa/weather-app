@@ -13,7 +13,30 @@
     <h1><%= title %> Weather App</h1>
     <p>Welcome to SWE230 Weather App</p>
   </div>
-    <%- include('../partials/weather-card') %>
+ 
+    <!--Main Content-->
+    <div class="d-flex justify-content-center">
+    <img src="images/weather-icon.png" width=100 alt="Weather Icon">
+  </div>
+  <div class="d-flex justify-content-center">
+    <form action="/weather" method="post">
+      <!--input type="text" name="city" id="city" placeholder="Enter City Name"-->
+      <label for="city">Choose a city:</label>
+
+      <select name="city" id="city">
+        <option value="Cairo">Cairo</option>
+        <option value="London">London</option>
+        <option value="Paris">Paris</option>
+        <option value="Alexandria">Alexandria</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="New York">New York</option>
+        <option value="Kuwait">Kuwait</option>
+      </select>
+      <br>
+      <button type="submit">Get Weather</button>
+    </form>
+  </div>
+  <!--Footer-->
     <footer>
     <%- include('../partials/footer') %>
   </footer>
